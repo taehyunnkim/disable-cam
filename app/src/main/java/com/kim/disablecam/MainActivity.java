@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             button.setOnClickListener(v -> {
                 dpm.setCameraDisabled(deviceAdmin, false);
                 setupUI();
+                showResult();
             });
         } else {
             header.setText(R.string.camera_is_enabled);
@@ -67,7 +69,16 @@ public class MainActivity extends AppCompatActivity {
             button.setOnClickListener(v -> {
                 dpm.setCameraDisabled(deviceAdmin, true);
                 setupUI();
+                showResult();
             });
+        }
+    }
+
+    public void showResult() {
+        if (dpm.getCameraDisabled(deviceAdmin)) {
+            Toast.makeText(this, "Camera is disabled", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Camera is enabled", Toast.LENGTH_LONG).show();
         }
     }
 

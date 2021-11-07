@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">DisableCam</string>
-    <string name="admin_receiver_status_enabled">Enabled!!</string>
+    <string name="admin_receiver_status_enabled">Admin Enabled</string>
     <string name="admin_receiver_status_disable_warning">Disable requested</string>
-    <string name="admin_receiver_status_disabled">Disabled!!</string>
+    <string name="admin_receiver_status_disabled">Admin Disabled</string>
     <string name="camera_is_disabled">Camera is currently disabled</string>
     <string name="camera_is_enabled">Camera is currently enabled</string>
     <string name="enable_camera">Enable Camera</string>
